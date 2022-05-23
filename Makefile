@@ -12,7 +12,7 @@ tao-docker-build: ## TAO用コンテナをビルド
 
 tao-convert:
 	docker exec -it lpdnet-tao-toolkit tao-converter -k nvidia_tlt -p Input,1x3x480x640,4x3x480x640,16x3x480x640 \
-		-t fp16 -d 3,480,640 -e /app/src/lpdnet_usa.engine /app/src/yolov4_tiny_usa_deployable.etlt
+		-t fp16 -d 3,480,640 -e /app/src/lpdnet_usa.engine /app/src/usa_pruned.etlt
 
 tao-docker-login: ## TAO用コンテナにログイン
 	docker exec -it lpdnet-tao-toolkit bash
